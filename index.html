@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Describeling</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Welcome Modal -->
+  <div id="welcome-modal" class="modal">
+    <div class="modal-content">
+      <h2>Welcome to Describeling!</h2>
+      <p>Improve your written language skills by describing a picture in your target language. Come back daily for a new image!</p>
+      <div class="selectors">
+        <label for="popup-interface-lang">Interface Language:</label>
+        <select id="popup-interface-lang">
+          <option value="en" selected>English</option>
+          <option value="fr">Français</option>
+        </select>
+
+        <label for="popup-target-lang">Target Language:</label>
+        <select id="popup-target-lang">
+          <option value="fr" selected>French</option>
+          <option value="en">English</option>
+        </select>
+      </div>
+      <button id="start-btn">Start</button>
+    </div>
+  </div>
+
+  <!-- Main App -->
+  <header>
+    <h1>Describeling</h1>
+    <div class="selectors">
+      <label for="interface-language">Interface:</label>
+      <select id="interface-language">
+        <option value="en">English</option>
+        <option value="fr">Français</option>
+      </select>
+
+      <label for="target-language">Target Language:</label>
+      <select id="target-language">
+        <option value="fr">French</option>
+        <option value="en">English</option>
+      </select>
+    </div>
+  </header>
+
+  <main class="app">
+    <div class="card">
+      <img id="daily-image" src="" alt="Daily Scene" />
+      <p class="prompt" id="prompt-text"></p>
+      <textarea id="user-input" placeholder=""></textarea>
+      <button id="submit"></button>
+      <div id="feedback"></div>
+    </div>
+
+    <div class="progress">
+      <p id="streak"></p>
+    </div>
+  </main>
+
+  <footer>
+    <p id="footer-text"></p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
+
